@@ -11,4 +11,18 @@ public class buildZone : MonoBehaviour
     {
         Tower.Add(block);
     }
+
+    public GameObject CheckHighestBlock()
+    {
+        GameObject temp = Tower[0];
+        foreach (GameObject block in Tower)
+        {
+            if (temp.transform.position.y < block.transform.position.y)
+            {
+                temp = block;
+            }
+        }
+        towerHeight = temp.transform.position.y;
+        return temp;
+    }
 }
