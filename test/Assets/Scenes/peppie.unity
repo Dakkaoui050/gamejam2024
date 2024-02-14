@@ -663,9 +663,10 @@ GameObject:
   - component: {fileID: 570116898}
   - component: {fileID: 570116897}
   - component: {fileID: 570116896}
+  - component: {fileID: 570116899}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: buildZone
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -679,7 +680,7 @@ Transform:
   m_GameObject: {fileID: 570116894}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.043, z: 0}
+  m_LocalPosition: {x: 0, y: 0.043, z: -1.248}
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -756,6 +757,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 570116894}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &570116899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570116894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2ae8422e9471c54c9e19b4119097deb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerHeight: 0
+  Tower: []
 --- !u!1 &599916901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1077,32 +1092,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 842422644}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &872421394 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3707443795994577297, guid: 9562ded5b282ccb4a9fcd6e4ecc9b2c9,
-    type: 3}
-  m_PrefabInstance: {fileID: 6761119963069607791}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &872421395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3118412703764888132, guid: 9562ded5b282ccb4a9fcd6e4ecc9b2c9,
     type: 3}
   m_PrefabInstance: {fileID: 6761119963069607791}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &872421396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 872421394}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2ae8422e9471c54c9e19b4119097deb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  towerHeight: 0
-  Tower: []
 --- !u!1 &881788986
 GameObject:
   m_ObjectHideFlags: 0
@@ -1127,7 +1122,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 881788986}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c98b18a0213865049b1c30eea1749ad8, type: 3}
   m_Name: 
@@ -2516,6 +2511,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: buildZone
       objectReference: {fileID: 0}
+    - target: {fileID: 3707443795994577297, guid: 9562ded5b282ccb4a9fcd6e4ecc9b2c9,
+        type: 3}
+      propertyPath: m_TagString
+      value: buildZone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -2523,11 +2523,7 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 570116895}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 3707443795994577297, guid: 9562ded5b282ccb4a9fcd6e4ecc9b2c9,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 872421396}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9562ded5b282ccb4a9fcd6e4ecc9b2c9, type: 3}
 --- !u!1 &8765070554055369716 stripped
 GameObject:

@@ -15,7 +15,7 @@ public class Block : MonoBehaviour
             Block temp = collision.gameObject.GetComponent<Block>();
             if (temp.inTower)
             {
-               bz = GetComponent<buildZone>();
+                bz = temp.bz;
                bz.AddBlock(gameObject);
                inTower = true;
             }
@@ -28,6 +28,7 @@ public class Block : MonoBehaviour
         {
             bz = other.gameObject.GetComponent<buildZone>();
             inTower = true;
+            bz.AddBlock(gameObject);
         }
     }
 }
