@@ -13,7 +13,7 @@ public class Block : MonoBehaviour
         if (collision.gameObject.tag == "block")
         {
             Block temp = collision.gameObject.GetComponent<Block>();
-            if (temp.inTower)
+            if (temp.inTower && !inTower)
             {
                bz = GetComponent<buildZone>();
                bz.AddBlock(gameObject);
