@@ -18,13 +18,14 @@ public class Block : MonoBehaviour
                 bz = temp.bz;
                bz.AddBlock(gameObject);
                inTower = true;
+                bz.CheckHighestBlock();
             }
         }
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "buildZone")
+        if (other.tag == "buildZone" && !inTower)
         {
             bz = other.gameObject.GetComponent<buildZone>();
             inTower = true;
