@@ -563,6 +563,8 @@ GameObject:
   - component: {fileID: 6580531128202485538}
   - component: {fileID: 3182849208785697808}
   - component: {fileID: 2423056333799335484}
+  - component: {fileID: -1336592224943799578}
+  - component: {fileID: 6624463898489836563}
   m_Layer: 0
   m_Name: ToonBabyA (2)
   m_TagString: Untagged
@@ -681,6 +683,42 @@ MonoBehaviour:
   - {fileID: 2100000, guid: d0d53f6fa33ddb549a53bcc910a77348, type: 2}
   - {fileID: 2100000, guid: 2199c0f1569589e42b00180ee53ca58d, type: 2}
   - {fileID: 2100000, guid: 77077385ddaba1047ad47856577ebaa1, type: 2}
+--- !u!114 &-1336592224943799578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762388408324747848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f841edc025833ee448d801d2e235b94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointA: {fileID: 0}
+  moveSpeed: 1.5
+  block: {fileID: 8432407871967591795, guid: bcff43316aa9286488fe8c73b2c0f7b8, type: 3}
+--- !u!65 &6624463898489836563
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2762388408324747848}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2898978795868088903
 GameObject:
   m_ObjectHideFlags: 0

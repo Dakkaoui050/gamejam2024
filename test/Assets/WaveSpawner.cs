@@ -12,8 +12,18 @@ public class WaveSpawner : MonoBehaviour
 
     private int currentWave = 0;
 
+    public Transform pointA;
+    public Transform pointB;
+
+    [SerializeField] private float moveSpeed = 5f;
+
+    private Transform target;
+
     void Start()
     {
+        target = GameObject.FindWithTag("buildZone").GetComponent<Transform>();
+        // Start by moving towards pointB
+        pointA = spawnPoints.Length > 0 ? spawnPoints[0] : transform;
         StartCoroutine(SpawnWaves());
     }
 
@@ -46,4 +56,28 @@ public class WaveSpawner : MonoBehaviour
         return enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
     }
 
+    void Update()
+    {
+        Move();
+    }
+
+    private void Move()
+    {
+        transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+
+        // Check if the AI has reached the current target
+        if (Vector2.Distance(transform.position, target.position) < 0.01f)
+        {
+            
+            if (target == pointA)
+                SetTarget(pointB);
+            else
+                SetTarget(pointA);
+        }
+    }
+
+    private void SetTarget(Transform newTarget)
+    {
+        target = newTarget;
+    }
 }

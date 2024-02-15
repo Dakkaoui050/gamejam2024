@@ -6,6 +6,7 @@ TagManager:
   tags:
   - buildZone
   - block
+  - AI
   layers:
   - Default
   - TransparentFX
